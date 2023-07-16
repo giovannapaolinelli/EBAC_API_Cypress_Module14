@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '14'
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v5
         continue-on-error: true
         with:
           install-command: npm install
@@ -28,6 +28,6 @@ jobs:
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./mochawesome-report
-    
+
