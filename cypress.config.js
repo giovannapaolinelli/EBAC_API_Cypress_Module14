@@ -5,8 +5,9 @@ module.exports = defineConfig({
   reporterOptions: {
     reportDir: 'mochawesome-report',
     overwrite: false,
+    reportFilename: "index.html",
     html: true,
-    json: true,
+    json: false,
   },
   e2e: {
     // We've imported your old cypress plugins here.
